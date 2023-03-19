@@ -5,7 +5,8 @@
 
 /* betty style doc for function main goes there */
 
-/** main- this is the main function
+/**
+ *main- this is the main function
  *
  * Return: o if successful
  */
