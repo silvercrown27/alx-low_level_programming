@@ -9,10 +9,13 @@
 int main(void)
 {
 	int i;
+	int iter = 0;
 
 	while (i < 99)
 	{
 		int j = 1;
+
+		j += iter;
 
 		while (j < 100)
 		{
@@ -29,6 +32,7 @@ int main(void)
 			putchar(' ');
 			j++;
 		}
+		iter++;
 		i++;
 	}
 	return (0);
