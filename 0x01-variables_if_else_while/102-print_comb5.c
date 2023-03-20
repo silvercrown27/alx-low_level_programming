@@ -8,12 +8,10 @@
 
 int main(void)
 {
-	int i = -1;
+	int i = 0;
 
 	while (i < 99)
 	{
-		i++;
-
 		int j = 1;
 
 		while (j < 100)
@@ -24,6 +22,7 @@ int main(void)
 			printf(" ");
 			j++;
 		}
+		i++;
 	}
 	return (0);
 }
