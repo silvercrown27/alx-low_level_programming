@@ -14,6 +14,7 @@ int main(void)
 	while (i < 99)
 	{
 		int j = 1;
+
 		j += iter;
 
 		while (j < 100)
@@ -21,6 +22,10 @@ int main(void)
 			printf("%02d", i);
 			printf(" ");
 			printf("%02d,", j);
+			if (i == 98 && j == 99)
+			{
+				break;
+			}
 			printf(" ");
 			j++;
 		}
