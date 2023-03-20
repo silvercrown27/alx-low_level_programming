@@ -8,8 +8,7 @@
 
 int main(void)
 {
-	int i = 0;
-	int iter = 0;
+	int i;
 
 	while (i < 99)
 	{
