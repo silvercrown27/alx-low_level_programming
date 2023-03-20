@@ -8,15 +8,20 @@
 
 int main(void)
 {
-	for (int i = 0; i < 99; i++)
+	int i = 0;
+	int j = 1;
+
+	while (i < 99)
 	{
-		for (int j = 1; j < 100; j++)
+		while (j < 100)
 		{
 			printf("%02d", i);
 			printf(" ");
 			printf("%02d,", j);
 			printf(" ");
+			j++;
 		}
+		i++;
 	}
 	return (0);
 }
