@@ -9,10 +9,12 @@
 int main(void)
 {
 	int i = 0;
+	int iter = 0;
 
 	while (i < 99)
 	{
 		int j = 1;
+		j += iter;
 
 		while (j < 100)
 		{
@@ -22,6 +24,7 @@ int main(void)
 			printf(" ");
 			j++;
 		}
+		iter += 1;
 		i++;
 	}
 	return (0);
