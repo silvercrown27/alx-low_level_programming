@@ -8,11 +8,14 @@
 
 int main(void)
 {
-	int i = 0;
-	int j = 1;
+	int i = -1;
 
 	while (i < 99)
 	{
+		i++;
+
+		int j = 1;
+
 		while (j < 100)
 		{
 			printf("%02d", i);
@@ -21,7 +24,6 @@ int main(void)
 			printf(" ");
 			j++;
 		}
-		i++;
 	}
 	return (0);
 }
