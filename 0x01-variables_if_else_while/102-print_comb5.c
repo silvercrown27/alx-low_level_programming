@@ -15,21 +15,21 @@ int main(void)
 	{
 		int j = 1;
 
-		j += iter;
-
 		while (j < 100)
 		{
-			printf("%02d", i);
-			printf(" ");
-			printf("%02d,", j);
+			putchar(i / 10 + '0');
+			putchar(i % 10 + '0');
+			putchar(' ');
+			putchar(j / 10 + '0');
+			putchar(j % 10 + '0');
 			if (i == 98 && j == 99)
 			{
 				break;
 			}
-			printf(" ");
+			putchar(',');
+			putchar(' ');
 			j++;
 		}
-		iter += 1;
 		i++;
 	}
 	return (0);
