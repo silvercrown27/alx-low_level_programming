@@ -8,15 +8,11 @@
 
 int main(void)
 {
-	int i;
-	int iter = 0;
+	int i = 0, j = 0;
 
 	while (i < 99)
 	{
-		int j = 1;
-
-		j += iter;
-
+		j = i + 1;
 		while (j < 100)
 		{
 			putchar(i / 10 + '0');
@@ -32,7 +28,6 @@ int main(void)
 			putchar(' ');
 			j++;
 		}
-		iter++;
 		i++;
 	}
 	return (0);
