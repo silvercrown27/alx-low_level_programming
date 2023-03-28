@@ -10,8 +10,8 @@
 void password_generator(void)
 {
 	int i, j;
-	int password_length = 13;
-	char password[password_length];
+	int password_length = 20;
+	char password[25];
 	char CHARSET[100];
 	char letter;
 
