@@ -7,22 +7,27 @@
  * Return: No return value
  */
 
-void password_generator()
+void password_generator(void)
 {
 	int i, j;
-	int password_length = 12;
+	int password_length = 13;
 	char password[password_length];
-	char CHARSET[], letter;
+	char CHARSET[100];
+	char letter;
 
 	srand(time(NULL));
-	
+
 	for (j = 0, letter = ' '; letter < '~'; letter++, j++)
 	{
 		CHARSET[j] = letter;
 	}
 	for (i = 0; i < password_length; i++)
 	{
+		password[i] = CHARSET[rand() % sizeof(CHARSET)];
 	}
+	password[password_length] = '\0';
+	printf("%s", password);
+	printf("\n");
 }
 
 /**
