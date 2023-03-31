@@ -43,6 +43,5 @@ char *leet(char *n)
 			}
 		}
 	}
-	printf("%s", n);
 	return (n);
 }
