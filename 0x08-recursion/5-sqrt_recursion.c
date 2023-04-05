@@ -17,10 +17,10 @@ int _sqrt_recursion(int n)
 }
 
 /**
- *actual_sqrt_recursion - recurses to find the natural square root of a number
- *@n: number to be square rooted
- *@i: iterator
- *Return: resulting square root
+ * findsqrt_recursion - recurses to find the natural square root of a number
+ * @n: number
+ * @i: iterator
+ * Return: root
  */
 
 int findsqrt(int n, int i)
