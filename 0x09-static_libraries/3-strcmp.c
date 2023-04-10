@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+ * _strcmp - checks the code
+ * s1: parameter 1
+ * s2: paramter 2
+ * Return: always 0
+ */
 int _strcmp(char *s1, char *s2)
 {
 	int i;

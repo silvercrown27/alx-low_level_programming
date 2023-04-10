@@ -30,7 +30,7 @@ char *_strcat(char *dest, char *src)
 	int k;
 	int i = strlength(dest);
 	int j = strlength(src);
-	
+
 	for (k = 0; k < i + j; k++)
 	{
 		dest[i + k] = src[k];
