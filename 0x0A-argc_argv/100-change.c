@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 	j += (i % 25) % 10 / 5;
 	j += ((i % 25) % 10) % 5 / 2;
 	j += (((i % 25) % 10) % 5) % 2;
-	
+
 	printf("%d\n", j);
 	return (0);
 }
