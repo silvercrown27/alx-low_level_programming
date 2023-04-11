@@ -9,7 +9,7 @@
 
 int main(int argc, char *argv[])
 {
-	int i, j, k, l;
+	int i, j;
 
 	if (argc != 2)
 	{
@@ -26,8 +26,11 @@ int main(int argc, char *argv[])
 	}
 
 	j = i / 25;
-	k = (i % 25) / 10;
-	l = (i % 25) % 10 + k + j;
-	printf("%d\n", l);
+	j += (i % 25) / 10;
+	j += (i % 25) % 10 / 5;
+	j += ((i % 25) % 10) % 5 / 2;
+	j += (((i % 25) % 10) % 5) % 2;
+	
+	printf("%d\n", j);
 	return (0);
 }
