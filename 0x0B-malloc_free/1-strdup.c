@@ -1,0 +1,27 @@
+#include "main.h"
+#include <string.h>
+
+/**
+ * _strdup - func that return a pointer to a newly allocated space in memory
+ * @str: string to be copied
+ *
+ * Return: copied string pointer (s)
+ */
+
+char *_strdup(char *str)
+{
+	char *s;
+	int size;
+	unsigned int i;
+
+	size = strlen(str);
+	s = malloc(sizeof(char) * size);
+	if (str == NULL)
+		return (NULL);
+
+	for (i = 0; *str != '\0'; i++, str++)
+	{
+		s[i] = *str;
+	}
+	return (s);
+}
