@@ -5,7 +5,7 @@
  * @n: long int input
  * @index: index of rhe number
  *
- * return: 1 if it worked, or -1 if an error occurred
+ * Return: 1 if it worked, or -1 if an error occurred
  */
 
 int set_bit(unsigned long int *n, unsigned int index)
