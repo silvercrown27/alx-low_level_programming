@@ -56,11 +56,12 @@ int main(int argc, char *argv[])
 	if (bytes_read == -1)
 		print_error_and_exit(file_from, 98);
 
+	if (close(file_dest == -1))
+		print_error_and_exit("Can't close dest_fd", 100);
+
 	if (close(source_fd == -1))
 		print_error_and_exit("Can't close fd", 100);
-
-	if (close(file_dest == -1))
-		print_error_and_exit("Can't close fd", 100);
-
+	
+	free(buffer);
 	return (0);
 }
