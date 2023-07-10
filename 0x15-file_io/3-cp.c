@@ -2,15 +2,28 @@
 #include <string.h>
 
 /**
+ * print_error_and_exit - function that dispays errors
+ *	encountered on the code to STDERR_FILENO
  *
+ * @message: text message
+ * @exit_code: error exit code
+ *
+ * Return: No value
  */
-
 void print_error_and_exit(const char *message, int exit_code)
 {
 	dprintf(2, "Error: %s\n", message);
 	exit(exit_code);
 }
 
+/**
+ * main - function that copies a file
+ *
+ * @argc: number of arguments received
+ * @argv: arguments
+ *
+ * Return: 0 if successful run
+ */
 int main(int argc, char *argv[])
 {
 	const char *file_from, *file_to;
@@ -42,7 +55,7 @@ int main(int argc, char *argv[])
 
 	if (bytes_read == -1)
 		print_error_and_exit(file_from, 98);
-	
+
 	if (close(source_fd == -1))
 		print_error_and_exit("Can't close fd", 100);
 
