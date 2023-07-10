@@ -7,8 +7,8 @@
  * @filename: name of the file to create
  * @text_content: a NULL terminated string to write to the file
  *
- * Returns: 1 on success, -1 on failure (file can not be created,
- * 		file can not be written, write “fails”, etc…)
+ * Return: 1 on success, -1 on failure (file can not be created,
+ *		file can not be written, write “fails”, etc…)
  */
 
 int create_file(const char *filename, char *text_content)
@@ -27,11 +27,11 @@ int create_file(const char *filename, char *text_content)
 	if (text_content != NULL)
 	{
 		bytes_write = write(file, text_content, strlen(text_content));
-		
+
 		if (bytes_write == -1)
 		{
 			close(file);
-			return(-1);
+			return (-1);
 		}
 	}
 
