@@ -20,7 +20,8 @@ void print_error_and_exit(const char *message, int exit_code)
  * write_error - function that writes the error message
  *
  * @message: Error message
- * @filename: file name raiding erro
+ * @filename: file name raising the error
+ * @exit_code: the exit code of the error
  *
  * Return: No value
  */
