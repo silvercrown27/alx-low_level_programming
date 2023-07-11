@@ -37,6 +37,23 @@ void write_error(char *message, const char *filename, int exit_code)
 }
 
 /**
+ * close_file - program tha  Closes file descriptors.
+ * @fd: file descriptor to be closed.
+ */
+void close_file(int fd)
+{
+	int c;
+
+	c = close(fd);
+
+	if (c == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+		exit(100);
+	}
+}
+
+/**
  * main - function that copies a file
  *
  * @argc: number of arguments received
@@ -61,7 +78,7 @@ int main(int argc, char *argv[])
 	if (source_fd == -1)
 		write_error("Error: Can't read from file ", file_from, 98);
 
-	file_dest = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0777);
+	file_dest = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (file_dest == -1)
 		write_error("Error: Can't write to ", file_to, 99);
 
@@ -76,12 +93,9 @@ int main(int argc, char *argv[])
 	if (bytes_read == -1)
 		print_error_and_exit(file_from, 98);
 
-	if (close(file_dest == -1))
-		print_error_and_exit("Error: Can't close fd", 100);
-
-	if (close(source_fd == -1))
-		print_error_and_exit("Error: Can't close fd", 100);
-
 	free(buffer);
+	close_file(file_dest);
+	close_file(source_fd);
+
 	return (0);
 }
