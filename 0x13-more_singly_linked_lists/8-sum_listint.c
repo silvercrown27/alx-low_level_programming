@@ -1,7 +1,11 @@
 #include "lists.h"
 
 /**
+ * sum_listint - funntion that sums up the values in the linked list
  *
+ * @head: pointer to the lnked list
+ *
+ * Return: the sum of the values on success, else return 0
  */
 int sum_listint(listint_t *head)
 {
