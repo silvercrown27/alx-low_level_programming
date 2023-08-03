@@ -6,25 +6,21 @@
  *
  * Return: unsigned int or 0 if fail
  */
-
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int num = 0;
-	int len = strlen(b), i;
+	unsigned int result = 0;
 
 	if (b == NULL)
-		return (0);
+		return 0;
 
-	for (i = 0; i < len; i++)
+	while (*b != '\0')
 	{
-		if (b[i] == '0')
-			num = num << 1;
-		else if (b[i] == '1')
-			num = (num << 1) | 1;
-		else
-			return (0);
+		if (*b != '0' && *b != '1')
+			return 0;
+
+		result = result * 2 + (*b - '0');
+		b++;
 	}
 
-	return (num);
+	return result;
 }
-
